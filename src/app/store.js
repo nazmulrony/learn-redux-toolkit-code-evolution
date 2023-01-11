@@ -1,7 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import cakeReducer from "../features/cake/cakeSlice";
-import iceCreamReducer from "../features/icecream/iceCreamSlice";
-import userReducer from "../features/user/userSlice";
+import cakeSlice from "../features/cake/cakeSlice";
+import iceCreamSlice from "../features/icecream/iceCreamSlice";
+import userSlice from "../features/user/userSlice";
+// import cakeReducer from "../features/cake/cakeSlice";
+// import iceCreamReducer from "../features/icecream/iceCreamSlice";
+// import userReducer from "../features/user/userSlice";
 
 //logger middleware
 // const reduxLogger = require("redux-logger");
@@ -10,9 +13,9 @@ import userReducer from "../features/user/userSlice";
 
 const store = configureStore({
     reducer: {
-        cake: cakeReducer,
-        iceCream: iceCreamReducer,
-        user: userReducer,
+        cake: cakeSlice,
+        iceCream: iceCreamSlice,
+        user: userSlice,
     },
     // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
