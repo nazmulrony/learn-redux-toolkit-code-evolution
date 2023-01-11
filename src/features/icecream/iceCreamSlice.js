@@ -13,7 +13,7 @@ const iceCreamSlice = createSlice({
             state.numOfIceCreams--;
         },
         reStocked: (state, action) => {
-            state.numOfIceCreams += action.payload;
+            state.numOfIceCreams += action.payload ? action.payload : 1;
         },
     },
     // extraReducers: {
